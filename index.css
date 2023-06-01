@@ -1,0 +1,45 @@
+
+.button_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 95px;
+    height: 35px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: grabbing;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+@media (hover: none) {
+    .button_box:not(:active) {
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 10);
+        transform: translateY(-5%);
+        color: rgb(0, 0, 0);
+        cursor: grab;
+        transition: 0.3s;
+    }
+}
+
+@media (hover: hover) {
+    .button_box:hover {
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 10);
+        transform: translateY(-5%);
+        color: rgb(0, 0, 0);
+        cursor: grab;
+        transition: 0.3s;
+    }
+    .button_box:active {
+        box-shadow: none;
+        transform: translateY(0%);
+        color: rgb(255, 255, 255);
+        cursor: grabbing;
+        transition: 0.3s;
+    }
+}
